@@ -2,6 +2,12 @@
 
 ```mermaid
 erDiagram
+    COMPANY ||--|{ CUSTOMER : places
+    COMPANY {
+        string name
+        string custNumber
+        string sector
+    }
     CUSTOMER ||--|{ ORDER : places
     CUSTOMER {
         string name
