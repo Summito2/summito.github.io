@@ -2,32 +2,22 @@
 
 ```mermaid
 erDiagram
-    COMPANY ||--|{ CUSTOMER : places
+    COMPANY ||--|{ CATALOGUE : places
     COMPANY {
         string name
         string custNumber
         string sector
     }
-    CUSTOMER ||--|{ ORDER : places
-    CUSTOMER {
+    CATALOGUE ||--|{ PRODUCT : places
+    CATALOGUE {
         string name
         string custNumber
         string sector
     }
-    ORDER ||--|{ LINE-ITEM : contains
-    ORDER {
+    COMPANY ||--|{ PRODUCT : contains
+    PRODUCT {
         int orderNumber
         string deliveryAddress
-    }
-    LINE-ITEM {
-        string productCode
-        int quantity
-        float pricePerUnit
-    }
-    CUSTOMER ||--|{ CATALOG : contains
-    CATALOG {
-        string productCode
-        int quantity
-        float pricePerUnit
+    
     }
 ```
