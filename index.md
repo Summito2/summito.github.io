@@ -8,7 +8,13 @@ erDiagram
         string custNumber
         string sector
     }
-    CATALOGUE ||--|{ PRODUCT : places
+    CATALOGUE ||--|{ CATALOGUE_PRODUCT : places
+    CATALOGUE {
+        string name
+        string custNumber
+        string sector
+    }
+    CATALOGUE_PRODUCT ||--|{ PRODUCT : places
     CATALOGUE {
         string name
         string custNumber
