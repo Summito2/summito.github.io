@@ -2,13 +2,13 @@
 
 ```mermaid
 erDiagram
-    CUSTOMER ||--o{ ORDER : places
+    CUSTOMER ||-- ORDER
     CUSTOMER {
         string name
         string custNumber
         string sector
     }
-    ORDER ||--|{ LINE-ITEM : contains
+    ORDER ||-- LINE-ITEM
     ORDER {
         int orderNumber
         string deliveryAddress
