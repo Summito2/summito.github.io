@@ -2,6 +2,7 @@
 
 ```mermaid
 erDiagram
+    CUSTOMER || ORDER
     CUSTOMER {
         string name
         string custNumber
